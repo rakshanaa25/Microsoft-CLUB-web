@@ -1,0 +1,30 @@
+.join-page{
+  padding:60px 20px;
+  text-align:center;
+}
+
+.contact-info{
+  margin-bottom:30px;
+}
+
+.join-form{
+  max-width:400px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+.join-form input,
+.join-form textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+
+.join-form button{
+  padding:12px;
+  border:none;
+  background:#7AB2B2;
+  border-radius:20px;
+}

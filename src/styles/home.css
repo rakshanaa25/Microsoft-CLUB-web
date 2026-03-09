@@ -1,0 +1,58 @@
+
+.hero{
+
+  text-align:center;
+
+  padding:150px 20px 100px 20px;
+
+}
+
+.hero h1{
+
+  background:linear-gradient(90deg,#5C8DF6,#7AB2B2);
+
+  -webkit-background-clip:text;
+
+  -webkit-text-fill-color:transparent;
+
+}
+
+.hero p{
+
+  max-width:650px;
+
+  margin:auto;
+
+  margin-bottom:30px;
+
+  font-size:18px;
+
+}
+
+
+
+/* CLUB INTRO */
+
+.club-intro{
+
+  max-width:900px;
+
+  margin:auto;
+
+  padding:80px 20px;
+
+  text-align:center;
+
+}
+
+.club-intro h2{
+
+  margin-bottom:20px;
+
+}
+
+.club-intro p{
+
+  margin-bottom:16px;
+
+}
