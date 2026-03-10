@@ -1,42 +1,66 @@
-import { useState } from "react";
-import team from "../data/teamData";
+import React, { useState } from "react";
+import { teamData } from "../data/teamData";
 import "../styles/team.css";
+import "../index.css";
 
-export default function Team() {
+const Team = () => {
+  const [searchTerm, setSearchTerm] = useState("");
 
-  const [search, setSearch] = useState("");
-
-  const filtered = team.filter(member =>
-    member.name.toLowerCase().includes(search.toLowerCase())
+  const filteredMembers = teamData.filter((member) =>
+    member.name.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
-    <section className="team-page">
+    <main className="team-page">
 
-      <h1>Meet the Team</h1>
+      {/* Header with Lighthouse Effect */}
+      <div className="team-header lighthouse">
+        <h1 className="page-title">Meet the Team</h1>
 
-      <input
-        className="team-search"
-        placeholder="Search members..."
-        onChange={(e) => setSearch(e.target.value)}
-      />
-
-      <div className="team-grid">
-
-        {filtered.map(member => (
-          <div key={member.id} className="team-card">
-
-            <img src={member.image} alt={member.name} />
-
-            <h3>{member.name}</h3>
-
-            <p>{member.role}</p>
-
-          </div>
-        ))}
-
+        <div className="search-container">
+          <input
+            type="text"
+            placeholder="Search team members..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            className="search-input"
+          />
+        </div>
       </div>
 
-    </section>
+      {/* Team Grid */}
+      <div className="team-grid">
+        {filteredMembers.map((member) => (
+          <div key={member.id} className="team-card lighthouse">
+            <img
+              src={member.image}
+              alt={member.name}
+              className="team-image"
+            />
+
+            <div className="team-info">
+              <h3 className="team-name">{member.name}</h3>
+              <p className="team-role">{member.role}</p>
+
+              <a
+                href={member.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="linkedin-link"
+              >
+                LinkedIn ↗
+              </a>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      {filteredMembers.length === 0 && (
+        <p className="no-results">No members found.</p>
+      )}
+
+    </main>
   );
-}
+};
+
+export default Team;

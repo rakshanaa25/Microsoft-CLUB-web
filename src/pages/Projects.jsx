@@ -1,23 +1,27 @@
-
-import { motion } from "framer-motion";
+import React from "react";
 import ProjectGrid from "../components/ProjectGrid";
 import "../styles/projects.css";
+import "../index.css";
 
-export default function Projects() {
-
+const Projects = () => {
   return (
-    <motion.div
-      className="projects-page"
-      initial={{ opacity: 0, y: 30 }}
-      animate={{ opacity: 1, y: 0 }}
-      exit={{ opacity: 0, y: -30 }}
-      transition={{ duration: 0.4 }}
-    >
+    <main className="projects-page">
 
-      <h1>Our Projects</h1>
+      {/* Header Section with Lighthouse Effect */}
+      <div className="projects-header lighthouse">
+        <h1 className="page-title">Our Flagship Projects</h1>
+        <p className="projects-subtitle">
+          Real-world solutions built by students for students
+        </p>
+      </div>
 
-      <ProjectGrid />
+      {/* Projects Grid with Lighthouse Effect */}
+      <div className="lighthouse">
+        <ProjectGrid />
+      </div>
 
-    </motion.div>
+    </main>
   );
-}
+};
+
+export default Projects;

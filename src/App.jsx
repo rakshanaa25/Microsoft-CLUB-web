@@ -1,49 +1,41 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import React, { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Team from './pages/Team';
+import Projects from './pages/Projects';
+import Join from './pages/Join';
+import './App.css';
 
-import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+function App() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-import Home from "./pages/Home";
-import Team from "./pages/Team";
-import Projects from "./pages/Projects";
-import Join from "./pages/Join";
+  useEffect(() => {
+    if (isDarkMode) {
+      document.body.classList.add('dark');
+    } else {
+      document.body.classList.remove('dark');
+    }
+  }, [isDarkMode]);
 
-import "./App.css";
-
-function AnimatedRoutes() {
-
-  const location = useLocation();
+  const toggleTheme = () => {
+    setIsDarkMode((prev) => !prev);
+  };
 
   return (
-    <AnimatePresence mode="wait">
-
-      <Routes location={location} key={location.pathname}>
-
+    <Router>
+      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+      <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/team" element={<Team />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/join" element={<Join />} />
-
       </Routes>
-
-    </AnimatePresence>
-  );
-}
-
-export default function App() {
-
-  return (
-    <Router>
-
-      <Navbar />
-
-      <main className="main-content">
-        <AnimatedRoutes />
-      </main>
-
       <Footer />
-
     </Router>
   );
 }
+
+export default App;
+

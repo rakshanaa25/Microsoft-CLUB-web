@@ -1,14 +1,21 @@
-export default function ProjectCard({ project }) {
+import React from 'react';
 
+const ProjectCard = ({ title, description }) => {
   return (
     <div className="project-card">
-
-      <h3>{project.title}</h3>
-
-      <p>{project.description}</p>
-
-      <button>View Project</button>
-
+      <div className="project-header">
+        <div className="project-icon">🚀</div>
+      </div>
+      <h3 className="project-title">{title}</h3>
+      <p className="project-desc">{description}</p>
+      <button
+        className="project-btn"
+        onClick={() => alert(`Opening ${title} project...`)}
+      >
+        View Project
+      </button>
     </div>
   );
-}
+};
+
+export default ProjectCard;

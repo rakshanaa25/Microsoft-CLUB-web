@@ -1,28 +1,26 @@
-import { useNavigate } from "react-router-dom";
-import "../styles/home.css";
+import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function Hero() {
-
-  const navigate = useNavigate();
-
+const Hero = () => {
   return (
     <section className="hero">
-
-      <h1>Empowering Future Innovators</h1>
-
-      <p>
-        The Microsoft Student Club is a hub for passionate developers,
-        designers and innovators collaborating to build impactful tech
-        solutions and real-world projects.
-      </p>
-
-      <button
-        className="primary-btn"
-        onClick={() => navigate("/join")}
-      >
-        Join Us
-      </button>
-
+      <div className="hero-content">
+        <div className="hero-badge">Microsoft Student Club</div>
+        <h1 className="hero-title">
+          Empowering Tomorrow's<br />Tech Leaders
+        </h1>
+        <p className="hero-subtitle">
+          Join the official Microsoft community on campus. Learn. Build. Innovate.
+        </p>
+        <Link to="/join" className="hero-btn">
+          Join the Club
+        </Link>
+      </div>
+      <div className="hero-visual">
+        <div className="hero-orb" />
+      </div>
     </section>
   );
-}
+};
+
+export default Hero;
