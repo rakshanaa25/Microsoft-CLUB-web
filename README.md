@@ -1,16 +1,152 @@
-# React + Vite
+# Microsoft Student Club Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Official website for the **Microsoft Student Club** built with **React and Vite**.  
+The website showcases the club, its members, and its projects with a modern and interactive user interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
 
-## React Compiler
+🌐 https://your-project-name.vercel.app
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Modern and responsive UI
+- Smooth page transitions
+- Light and dark theme
+- Interactive team section
+- Projects showcase
+- Clean and minimal design
+- Fast performance using Vite
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend:** React
+- **Build Tool:** Vite
+- **Styling:** CSS
+- **Animations:** Framer Motion
+- **Routing:** React Router
+- **Deployment:** Vercel
+
+---
+
+## 📂 Project Structure
+
+```
+microsoft-student-club-website
+│
+├── public
+│
+├── src
+│   ├── components
+│   │   ├── Navbar.jsx
+│   │   ├── Footer.jsx
+│   │   ├── TeamMembers.jsx
+│   │
+│   ├── pages
+│   │   ├── Home.jsx
+│   │   ├── Team.jsx
+│   │   ├── Projects.jsx
+│   │
+│   ├── styles
+│   │   ├── home.css
+│   │   ├── team.css
+│   │   ├── projects.css
+│   │
+│   ├── App.jsx
+│   ├── main.jsx
+│
+└── package.json
+```
+
+---
+
+## ⚙️ Installation and Setup
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/yourusername/microsoft-student-club-website.git
+```
+
+### 2️⃣ Navigate to the project folder
+
+```bash
+cd microsoft-student-club-website
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 4️⃣ Run the development server
+
+```bash
+npm run dev
+```
+
+The app will run at:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🚀 Deployment
+
+This project is deployed using **Vercel**.
+
+Steps to deploy:
+
+1. Push the project to GitHub
+2. Go to https://vercel.com
+3. Import your repository
+4. Click **Deploy**
+
+Vercel will automatically detect **Vite + React** and deploy the project.
+
+---
+
+## 📸 Preview
+
+You can add a screenshot of the website here.
+
+Example:
+
+```
+![Website Preview](preview.png)
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+If you would like to improve this project:
+
+1. Fork the repository
+2. Create a new branch
+3. Commit your changes
+4. Submit a Pull Request
+
+---
+
+## 📜 License
+
+This project is open source and available under the **MIT License**.
+
+---
+
+## 👨‍💻 Author
+
+Developed by **Your Name**
+
+GitHub: https://github.com/yourusername
