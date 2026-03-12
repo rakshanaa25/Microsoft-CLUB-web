@@ -1,3 +1,4 @@
+
 :root {
   --primary: #7AB2B2;
   --text: #1f2937;
@@ -40,9 +41,9 @@ button, a {
   text-align: center;
   background: linear-gradient(90deg, var(--primary), #4a9a9a);
   -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
+
 /* Navbar styles */
 .navbar {
   background: #7AB2B2;
@@ -91,14 +92,7 @@ button, a {
   font-weight: 600;
   position: relative;
   padding: 0.5rem 0;
-  transition: color 0.25s ease;
-}
-
-.nav-link,
-.nav-link:visited,
-.nav-link:hover,
-.nav-link.active {
-  color: white;
+  transition: color 0.3s;
 }
 
 .nav-link:hover {
@@ -113,8 +107,7 @@ button, a {
   width: 0;
   height: 3px;
   background: white;
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-            box-shadow 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link.active:after,
@@ -228,21 +221,6 @@ button, a {
   transform: translateY(-12px);
   box-shadow: 0 20px 40px rgba(122, 178, 178, 0.25);
 }
-CSS/* src/App.css */
-body {
-  font-feature-settings: "kern";
-}
-
-/* Ensure full height layout */
-#root {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-}
-
-main {
-  flex: 1;
-}
 .footer {
   background: #EBF4F6;
   color: #334155;
@@ -345,35 +323,5 @@ body.dark .footer {
 @media (max-width: 968px) {
   .footer-container {
     grid-template-columns: 1fr 1fr;
-  }
-}
-.lighthouse {
-  position: relative;
-  overflow: hidden;
-}
-
-.lighthouse::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -120%;
-  width: 40%;
-  height: 100%;
-  background: linear-gradient(
-    120deg,
-    transparent,
-    rgba(255,255,255,0.6),
-    transparent
-  );
-  transform: skewX(-25deg);
-  animation: lighthouseSweep 4s infinite;
-}
-
-@keyframes lighthouseSweep {
-  0% {
-    left: -120%;
-  }
-  100% {
-    left: 200%;
   }
 }

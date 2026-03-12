@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 
@@ -58,7 +59,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>© 2026 Microsoft Student Club. All rights reserved.</p>
-        <p>Built using React • Vite • Microsoft Azure</p>
+        <p>Built by the Web Team</p>
       </div>
     </footer>
   );

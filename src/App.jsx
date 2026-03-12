@@ -25,6 +25,9 @@ function App() {
 
   return (
     <Router>
+      
+      <div className="lighthouse-glow"></div>
+
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <Routes>
         <Route path="/" element={<Home />} />

@@ -1,5 +1,4 @@
 import React from 'react';
-
 const ClubIntro = () => {
   return (
     <section className="club-intro">
@@ -19,7 +18,7 @@ const ClubIntro = () => {
         </div>
         <div className="intro-stats">
           <div className="stat">
-            <span className="stat-number">500+</span>
+            <span className="stat-number">100+</span>
             <span className="stat-label">Members</span>
           </div>
           <div className="stat">
