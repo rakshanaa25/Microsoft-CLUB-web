@@ -20,6 +20,7 @@ The website showcases the club, its members, and its projects with a modern and 
 - Projects showcase
 - Clean and minimal design
 - Fast performance using Vite
+- Lighthouse effect
 
 ---
 
