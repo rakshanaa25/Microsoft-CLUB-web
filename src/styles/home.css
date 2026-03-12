@@ -67,7 +67,7 @@ CSS/* src/styles/home.css */
 .hero-visual {
   position: absolute;
   right: 10%;
-  top: 10%;
+  top: 13%;
   width: 380px;
   height: 380px;
   background: radial-gradient(circle, rgba(122,178,178,0.25) 0%, transparent 70%);
@@ -128,8 +128,23 @@ CSS/* src/styles/home.css */
   gap: 3rem;
 }
 
+/* laptop adjustment */
+@media (min-width: 1024px) {
+  .intro-stats {
+    margin-left: 70px;
+  }
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .intro-stats {
+    justify-content: center;
+    margin-left: 0;
+  }
+}
+
 .stat {
-  text-align: center;
+  text-align: left;
 }
 
 .stat-number {
