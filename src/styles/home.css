@@ -67,7 +67,7 @@ CSS/* src/styles/home.css */
 .hero-visual {
   position: absolute;
   right: 10%;
-  top: 25%;
+  top: 18%;
   width: 380px;
   height: 380px;
   background: radial-gradient(circle, rgba(122,178,178,0.25) 0%, transparent 70%);
@@ -150,5 +150,34 @@ CSS/* src/styles/home.css */
     grid-template-columns: 1fr;
     gap: 3rem;
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .hero-visual {
+    width: 200px;
+    height: 200px;
+    right: -50px;
+    top: 10%;
+    opacity: 0.4;
+  }
+
+  .hero-orb {
+    width: 70px;
+    height: 70px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-visual {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 120px 1.5rem 60px;
+  }
+}
+@media (max-width: 768px) {
+  .hero-visual {
+    top: 10%;
   }
 }
