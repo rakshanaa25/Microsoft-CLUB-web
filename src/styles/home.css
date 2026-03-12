@@ -67,7 +67,7 @@ CSS/* src/styles/home.css */
 .hero-visual {
   position: absolute;
   right: 10%;
-  top: 18%;
+  top: 12%;
   width: 380px;
   height: 380px;
   background: radial-gradient(circle, rgba(122,178,178,0.25) 0%, transparent 70%);
@@ -179,5 +179,14 @@ CSS/* src/styles/home.css */
 @media (max-width: 768px) {
   .hero-visual {
     top: 10%;
+  }
+}
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 1.5rem 40px;
+  }
+
+  .hero-badge {
+    margin-bottom: 1rem;
   }
 }
