@@ -67,7 +67,7 @@ CSS/* src/styles/home.css */
 .hero-visual {
   position: absolute;
   right: 10%;
-  top: 12%;
+  top: 10%;
   width: 380px;
   height: 380px;
   background: radial-gradient(circle, rgba(122,178,178,0.25) 0%, transparent 70%);
